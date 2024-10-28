@@ -1,0 +1,52 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "July 2024 -October 2024",
+    title: "Python Developer (DJANGO)",
+    company: "Research Centre in Mathematics (CIMAT A.C.)",
+    description:
+      "Led development and deployment of CIMPS 2024's event management platform using Django, implemented secure payment processing and automated diploma generation for 500+ participants, and fortified the application with Cloudflare protection while maintaining 99.9% uptime on AWS infrastructure.",
+    link: "https://cimps.org/",
+  },
+  {
+    date: "February 2024-September 2024",
+    title: "Python Developer (DJANGO)",
+    company: "BECAANA Dulces S.A. de C.V.",
+    description:
+      "Led the development and implementation of a comprehensive ERP and sales point system for BECAANA Dulces, following ISO/IEC 29110 standards and Agile methodologies. Add features to the platform with financial analytics dashboard, vendor reporting, and automated receipt generation. Deployed the containerized application on AWS EC2 with complete infrastructure setup (SSL, Firewall, DNS), achieving zero downtime while maintaining robust security through role-based access control.",
+    link: "https://becaana.store/",
+  },
+  {
+    date: "January 2024-April 2024",
+    title: "Project Manager",
+    company: "Research Centre in Mathematics (CIMAT A.C.)",
+    description:
+      "Led the development and early delivery of BioSuite-T, a copyrighted bioinformatics platform integrating AI algorithms for omics data analysis, while managing deployment on AWS EC2 and implementing ISO/IEC 29110 standards, resulting in a streamlined, code-free environment for researchers.",
+  },
+  {
+    date: "April 2023-June 2023",
+    title: "Python Developer for AI (NLP) data analysis using DJANGO",
+    company: "Research Centre in Mathematics (CIMAT A.C.) and Nuevo León Government",
+    description:
+      "Led the development of a Django-based sentiment analysis platform for tourism, implementing Transformer AI models to analyze Google Maps reviews of hotels, restaurants, and tourist attractions. Engineered a no-code GUI dashboard for stakeholders to interact with NLP analysis results, complete with automated graph generation. Deployed the containerized application on AWS EC2 with full security configuration, enabling tourism stakeholders to derive actionable insights from user feedback without programming expertise.",
+  },
+  {
+    date: "May 2022-October 2024",
+    title: "System Administrator",
+    company: "Research Centre in Mathematics (CIMAT A.C.)",
+    description:
+      "Administered AWS infrastructure for CIMPS 2022, 2023, and 2024 events, managing EC2 deployments, security configurations, and containerized applications (OpenConf, WordPress, DJANGO), while ensuring continuous system availability and secure access through SSL-certified domains.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

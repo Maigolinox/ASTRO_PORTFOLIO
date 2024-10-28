@@ -1,0 +1,168 @@
+---
+import GitHub from "../icons/GitHub.astro"
+import NextJS from "../icons/NextJS.astro"
+import Tailwind from "../icons/Tailwind.astro"
+import Link from "../icons/Link.astro"
+import Node from "../icons/Node.astro"
+import LinkButton from "./LinkButton.astro"
+import Html from "../icons/Html.astro"
+import Python from "../icons/Python.astro"
+import Django from "../icons/Django.astro"
+import Mongo from "../icons/Mongo.astro"
+import Postgresql from "../icons/Postgres.astro"
+import Bootstrap from "../icons/Bootstrap.astro"
+import Css from "../icons/Css.astro"
+import R from "../icons/R.astro"
+import AI from "../icons/ai.astro"
+
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  NODE: {
+    name: "NodeJS",
+    class: "bg-[#003159] text-white",
+    icon: Node,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-[#003159] text-white",
+    icon: Html,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#003159] text-white",
+    icon: Python,
+  },
+  DJANGO: {
+    name: "Django",
+    class: "bg-[#003159] text-white",
+    icon: Django,
+  },
+  MONGO: {
+    name: "MongoDB",
+    class: "bg-[#003159] text-white",
+    icon: Mongo,
+  },
+  POSTGRES: {
+    name: "PostGreSQL",
+    class: "bg-[#003159] text-white",
+    icon: Postgresql,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#003159] text-white",
+    icon: Css,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-[#003159] text-white",
+    icon: Bootstrap,
+  },
+  R: {
+    name: "R",
+    class: "bg-[#003159] text-white",
+    icon: R,
+  },
+  AI: {
+    name: "Artificial Intelligence",
+    class: "bg-[#003159] text-white",
+    icon: AI,
+  },
+}
+const PROJECTS = [
+  {
+    title: "VSEST 29110",
+    description:
+      "Led the development of VSEST 29110, a comprehensive platform supporting ISO/IEC 29110 standard implementation for Very Small Entities (VSEs), integrating ChatGPT API (3.5 Turbo-0125) for intelligent document analysis and compliance auditing. Engineered automated documentation review processes and real-time compliance tracking using Python, Django, and JavaScript, while implementing social login and role-based access control. The platform significantly streamlined the ISO standard implementation process through AI-powered insights and automated auditing capabilities, demonstrated through positive user adoption and feedback over 17 months of development.",
+    link: "https://vsest29110.site/",
+    github: "https://github.com/Maigolinox/VSEST-29110-DEFINITIVO",
+    image: "/projects/VSEST29110.png",
+    tags: [TAGS.PYTHON, TAGS.DJANGO, TAGS.MONGO, TAGS.HTML, TAGS.CSS, TAGS.BOOTSTRAP,TAGS.POSTGRES,TAGS.AI],
+  },
+  {
+    title: "FungiRegEx",
+    description:
+      "FungiRegEx is a software tool designed to simplify the analysis of fungal protein sequences. It connects directly to the JGI Mycocosm database, containing 2,402 fungal species, allowing researchers to search for specific protein sequence patterns without needing to download large files. Its user-friendly graphical interface makes it accessible to those without programming skills, offering customizable search parameters, filtering options, and the ability to export results to CSV files.",
+    link: "https://www.mdpi.com/2076-3417/14/11/4429",
+    github: "https://github.com/Maigolinox/fungiregex",
+    image: "/projects/fungiregex.png",
+    tags: [TAGS.NODE, TAGS.HTML, TAGS.CSS, TAGS.MONGO],
+  },
+  {
+    title: "El impacto del COVID 19 sobre la economía mexicana (Shiny Application)",
+    description:
+      "The Impact of COVID-19 on the Mexican Economy (Dec 2020 – Feb 2021) involved analyzing the effects of the pandemic on employment in Mexico using a Shiny application. Working remotely with a team, I developed ARIMA time series models to forecast trends, analyzing the impact across different economic sectors (primary, secondary, tertiary) and income levels. The project highlighted which sectors and income groups were most affected and included analysis by business size. Results were presented through interactive visualizations in the Shiny app, along with a detailed report of the methodology and findings.",
+    link: " https://victor-terron.shinyapps.io/EQUIPO4BEDU/",
+    image: "/projects/shinyApp.png",
+    tags: [TAGS.HTML, TAGS.CSS,TAGS.POSTGRES,TAGS.R],
+  },
+  
+  {
+    title: "IoT Broker Server with EMQX and MQTT",
+    description:
+      "This project focuses on creating an IoT broker server using EMQX and MQTT protocols to manage communication between various IoT devices in a smart home environment. The implementation includes programming ESP32 and Arduino devices using C++, C, and Python to establish efficient and secure communication channels. The server handles real-time data transmission and processing, enabling seamless integration of sensors, actuators, and home automation systems. The solution is designed to support scalability, with robust data handling and a focus on enhancing the user experience through responsive and automated home control features.",
+    image: "/projects/emqx.png",
+    tags: [TAGS.NODE, TAGS.HTML, TAGS.POSTGRES],
+  },
+]
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+  <div class="w-full md:w-1/2">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+    </div>
+  </div>
+
+  <div class="w-full md:w-1/2 md:max-w-lg">
+    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+      {title}
+    </h3>
+    <div class="flex flex-wrap mt-2">
+      <ul class="flex flex-row mb-2 gap-x-2">
+          {tags.map((tag) => (
+            <li>
+              <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}>
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+      <footer class="flex items-end justify-start mt-4 gap-x-4">
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="size-6" />
+              Code
+              
+            </LinkButton>
+          )}
+          {link && (
+            <LinkButton href={link}>
+              <Link class="size-4" />
+              Preview
+            </LinkButton>
+          )}
+        </footer>
+    </div>
+  </div>
+</article>
+    ))
+  }
+</div>
+
+
